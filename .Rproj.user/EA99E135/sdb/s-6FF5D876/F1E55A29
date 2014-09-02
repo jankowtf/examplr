@@ -1,0 +1,16 @@
+{
+    "contents" : "require(\"rapp.core.examples\")\nrequire(\"rapp.core.repos\")\nrequire(\"testthat\")\n",
+    "created" : 1409679670536.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2101272848",
+    "id" : "F1E55A29",
+    "lastKnownWriteTime" : 1409679023,
+    "path" : "Q:/home/wsp/dev_packages.r",
+    "project_path" : null,
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

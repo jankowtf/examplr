@@ -1,0 +1,16 @@
+{
+    "contents" : "context(\"package\")\n\ntest_that(\"ensureExamplesDirectory\", {\n\n    expect_is(res <- ensureExamplesDirectory(), \"logical\")\n    expect_true(all(res))\n        \n  }\n)\n",
+    "created" : 1409680232842.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1613288682",
+    "id" : "A4172CA7",
+    "lastKnownWriteTime" : 1409680250,
+    "path" : "Q:/home/wsp/rapp2/rapp.core.examples/tests/testthat/test-ensureExamplesDirectory.r",
+    "project_path" : "tests/testthat/test-ensureExamplesDirectory.r",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
