@@ -60,7 +60,7 @@ setMethod(f = "ensureExamplesDirectory",
     .ns = "missing"
   ), 
   definition=function(
-    path = ".",
+    path,
     ...,
     .ctx,
     .ns
@@ -144,8 +144,8 @@ setMethod(f = "ensureExamplesDirectory",
     .ns
   ) {
     
-  sapply(path, dir.create, recursive = TRUE, showWarnings = FALSE)
-  return(TRUE)
+  out <- sapply(path, dir.create, recursive = TRUE, showWarnings = FALSE)
+  out[1:length(out)] <- TRUE
     
   }
 )
