@@ -124,7 +124,7 @@ setMethod(
 #   }        
   
   ## Dont-Run pattern //
-  pattern.dont <- "^\\\\dontrun{$"
+  pattern_dont <- "^\\\\dontrun{$"
   
   ## Get files //
   files <- getExistingExamples(path = path, return_path = TRUE)
@@ -140,24 +140,25 @@ setMethod(
       out <- logical()
     } else {
       ## Run //
+      ii=files[1]
       out <- sapply(files, function(ii) {
         cnt <- readLines(ii)
-        idx <- grep(pattern.dont, cnt, perl = TRUE)
+        idx <- grep(pattern_dont, cnt, perl = TRUE)
         if (length(idx)) {
           cnt <- cnt[c(-idx, -length(cnt))]
         }
-        cnt <- paste(cnt, collapse="")
+        cnt <- paste(cnt, collapse="\n")
         expr <- parse(text=cnt)
         out <- tryCatch(
           {
             eval(expr)
             TRUE
           },
-          warning=function(cond) {
+          warning = function(cond) {
             warning(conditionMessage(cond))
             invokeRestart("muffleWarning")
           },
-          error=function(cond) {
+          error = function(cond) {
             message(conditionMessage(cond)) 
             FALSE
           }

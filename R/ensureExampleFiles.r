@@ -8,6 +8,12 @@
 #' 
 #' @param pkg \strong{Signature argument}.
 #' 		Package name or path to R package project.
+#' @param strict \code{\link{logical}}.
+#'    Should certain conditions trigger an error (\code{TRUE}) or only a 
+#'    warning (\code{FALSE}, default)?
+#'    Currently, the condition is met when the extension of an example file
+#'    path does not comply with the convention of using \code{.r} as the 
+#'    extension for R files (instead of \code{.R}).
 #' @template threedot
 #' @template context-and-namespace
 #' @example inst/examples/ensureExampleFiles.R
@@ -26,6 +32,7 @@ setGeneric(
   ),
   def = function(
     pkg = ".",
+    strict = FALSE,
     ...,
     .ctx,
     .ns
@@ -66,12 +73,13 @@ setMethod(f = "ensureExampleFiles",
   ), 
   definition=function(
     pkg = ".",
+    strict,
     ...,
     .ctx,
     .ns
   ) {
     
-  ensureExampleFiles(pkg = pkg) 
+  ensureExampleFiles(pkg = pkg, strict = strict, ...) 
     
   }
 )
@@ -108,6 +116,7 @@ setMethod(f = "ensureExampleFiles",
   ), 
   definition=function(
     pkg,
+    strict,
     ...,
     .ctx,
     .ns
@@ -115,6 +124,7 @@ setMethod(f = "ensureExampleFiles",
     
   return(ensureExampleFiles(
     pkg = pkg,
+    strict = strict,
     ...,
     .ctx = structure(NA, class = "RappCoreExamplesS3"),
     .ns = structure(NA, class = "RappCoreExamplesS3")
@@ -139,13 +149,14 @@ setMethod(f = "ensureExampleFiles",
 #' @param .ns \code{\link{RappCoreExamplesS3}}.   
 #' @return See method: 
 #'   	\code{\link[rapp.core.examples]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
-#' @example inst/examples/ensureExampleFiles.R
+#' @example inst/examples/ensureExampleFiles.r
 #' @seealso \code{
 #' 		\link[rapp.core.examples]{ensureExampleFiles}
 #' }
 #' @template author
 #' @template references
 #' @export
+#' @import rapp.core.condition
 setMethod(f = "ensureExampleFiles", 
   signature = signature(
     pkg = "character",
@@ -154,19 +165,27 @@ setMethod(f = "ensureExampleFiles",
   ), 
   definition=function(
     pkg,
+    strict,
     ...,
     .ctx,
     .ns
   ) {
-    
+  
+  ## Strictness //
+  cond_type <- switch(strict, "TRUE" = "error", "FALSE" = "warning")    
+  
 #      if (!is.package(pkg)) {
 #          create_description(pkg)
   pkg <- devtools::as.package(pkg)
   
+  ## Patterns //
   pattern_exampletag <- ".*@example (?=\\w*)"
   pattern_roxygen <- "^(#' ?|##' ?)"
+  
+  ## Templates //
   example_template <- c("\\dontrun{", "", "## TODO: add example", "", "}")            
   
+  ## Paths //
   path_r <- file.path(pkg$path, "R")
   path_examples <- "inst/examples"
   path_examples_ref <- file.path(path_examples, "refs")
@@ -176,17 +195,47 @@ setMethod(f = "ensureExampleFiles",
   dir.create(path_examples_ref, showWarnings=FALSE)
   
   files <- list.files(path_r, full.names=TRUE, pattern="\\.[rR]$")
-  ii=files[[1]]
+#   ii=files[[1]]
   out <- unlist(lapply(files, function(ii) {
     out <- TRUE
     cnt <- readLines(ii)
     roxycode <- grep(pattern_roxygen, cnt, value=TRUE)
     if (length(roxycode)) {
-      examples <- unique(grep(pattern_exampletag, roxycode, value=TRUE, perl=TRUE))
-      if (length(examples)) {
+#       examples <- unique(grep(pattern_exampletag, roxycode, value=TRUE, perl=TRUE))
+      idx <- unique(grep(pattern_exampletag, roxycode, perl=TRUE))
+      
+      if (length(idx)) {
+        examples <- roxycode[idx]
         examples <- file.path(path_examples, basename(examples))
-        out <- sapply(examples, function(ii) {
-          ii <- gsub("\\.R$", ".r", ii)
+#         ii_2=examples[1]
+        out <- sapply(examples, function(ii_2) {
+          if (length(grep("\\.R$", ii_2))) {
+            rapp.core.condition::signalCondition(
+              condition = "ConventionViolation:FileExtension",
+              msg = c(
+                "Convention violation: file extension of example file path",
+                File = ii,
+                Path = ii_2,
+                "Expected file extension" = ".r"
+              ),
+              ns = "rapp.core.examples",
+              type = cond_type
+            )
+          }
+          ii_2 <- gsub("\\.R$", ".r", ii_2)
+          if (!length(grep("\\.r$", ii_2))) {
+            rapp.core.condition::signalCondition(
+              condition = "InvalidExampleFilePath",
+              msg = c(
+                "Invalid example file path",
+                File = ii,
+                Path = ii_2
+              ),
+              ns = "rapp.core.examples",
+              type = "error"
+            )
+          }
+          
           out <- file.exists(ii)
           if (!out) {
             write(example_template, file=ii)
