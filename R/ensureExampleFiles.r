@@ -156,6 +156,7 @@ setMethod(f = "ensureExampleFiles",
 #' @template author
 #' @template references
 #' @export
+#' @import devtools
 #' @import rapp.core.condition
 setMethod(f = "ensureExampleFiles", 
   signature = signature(
@@ -173,7 +174,7 @@ setMethod(f = "ensureExampleFiles",
   
   ## Strictness //
   cond_type <- switch(strict, "TRUE" = "error", "FALSE" = "warning")    
-  
+
 #      if (!is.package(pkg)) {
 #          create_description(pkg)
   pkg <- devtools::as.package(pkg)
@@ -195,7 +196,7 @@ setMethod(f = "ensureExampleFiles",
   dir.create(path_examples_ref, showWarnings=FALSE)
   
   files <- list.files(path_r, full.names=TRUE, pattern="\\.[rR]$")
-#   ii=files[[1]]
+#   ii=files[[2]]
   out <- unlist(lapply(files, function(ii) {
     out <- TRUE
     cnt <- readLines(ii)
@@ -236,9 +237,9 @@ setMethod(f = "ensureExampleFiles",
             )
           }
           
-          out <- file.exists(ii)
+          out <- file.exists(ii_2)
           if (!out) {
-            write(example_template, file=ii)
+            write(example_template, file=ii_2)
             out <- TRUE
           } 
           out

@@ -1,3 +1,18 @@
+# CHANGES IN rapp.core.examples VERSION 0.1.0.9
+
+## NEW FEATURES
+
+## BUG FIXES
+
+- `ensureExamplesDirectory()`:
+  - corrected path of the files that should actually be written
+
+## MAJOR CHANGES
+
+## MINOR CHANGES
+
+-----
+
 # CHANGES IN rapp.core.examples VERSION 0.1.0.8
 
 ## NEW FEATURES
