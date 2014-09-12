@@ -64,7 +64,7 @@ setGeneric(
 #' @param .ns \code{\link{missing}}.   
 #' @return See method: 
 #' 		\code{\link[rapp.core.examples]{getExistingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
-#' @example inst/examples/getExistingExamples.R
+#' @example inst/examples/getExistingExamples.r
 #' @seealso \code{
 #' 		\link[rapp.core.examples]{getExistingExamples},
 #' 		\link[rapp.core.examples]{getExistingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
@@ -137,7 +137,7 @@ setMethod(
 #' @param .ctx \code{\link{missing}}. 
 #' @param .ns \code{\link{missing}}.   
 #' @return TODO
-#' @example inst/examples/getExistingExamples.R
+#' @example inst/examples/getExistingExamples.r
 #' @seealso \code{
 #' 		\link[rapp.core.examples]{getExistingExamples},
 #' 		\link[rapp.core.examples]{getExistingExamples-character-missing-missing-method}

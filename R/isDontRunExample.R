@@ -14,7 +14,7 @@
 #' 		\code{\link[rapp.core.examples]{getBinaryExampleStatus}}.
 #' @template threedot
 #' @template context-and-namespace
-#' @example inst/examples/isDontRunExample.R
+#' @example inst/examples/isDontRunExample.r
 #' @seealso \code{
 #'    \link[rapp.core.examples]{isDontRunExample-character-missing-missing-method},
 #'    \link[rapp.core.examples]{isDontRunExample-character-RappCoreExamplesS3-RappCoreExamplesS3-method},
@@ -53,7 +53,7 @@ setGeneric(
 #' @param .ns \code{\link{missing}}.   
 #' @return See method: 
 #' 		\code{\link[rapp.core.examples]{isDontRunExample-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
-#' @example inst/examples/isDontRunExample.R
+#' @example inst/examples/isDontRunExample.r
 #' @seealso \code{
 #' 		\link[rapp.core.examples]{isDontRunExample},
 #' 		\link[rapp.core.examples]{isDontRunExample-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
@@ -111,7 +111,7 @@ setMethod(
 #' @param .ns \code{\link{RappCoreExamplesS3}}.  
 #' @return \code{\link{logical}}. \code{TRUE} means example is a 
 #' 		"dont-run" example, \code{FALSE} means it is not.
-#' @example inst/examples/isDontRunExample.R
+#' @example inst/examples/isDontRunExample.r
 #' @seealso \code{
 #' 		\link[rapp.core.examples]{isDontRunExample},
 #' 		\link[rapp.core.examples]{isDontRunExample-character-missing-missing-method}

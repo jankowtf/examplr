@@ -16,7 +16,7 @@
 #'    extension for R files (instead of \code{.R}).
 #' @template threedot
 #' @template context-and-namespace
-#' @example inst/examples/ensureExampleFiles.R
+#' @example inst/examples/ensureExampleFiles.r
 #' @seealso \code{
 #'    \link[rapp2]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
 #' }
@@ -57,7 +57,7 @@ setGeneric(
 #' @param .ns \code{\link{missing}}.   
 #' @return See method: 
 #' 		\code{\link[rapp.core.examples]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
-#' @example inst/examples/ensureExampleFiles.R
+#' @example inst/examples/ensureExampleFiles.r
 #' @seealso \code{
 #' 		\link[rapp.core.examples]{ensureExampleFiles},
 #' 		\link[rapp.core.examples]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
@@ -100,7 +100,7 @@ setMethod(f = "ensureExampleFiles",
 #' @param .ns \code{\link{missing}}.   
 #' @return See method: 
 #'     \code{\link[rapp.core.examples]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
-#' @example inst/examples/ensureExampleFiles.R
+#' @example inst/examples/ensureExampleFiles.r
 #' @seealso \code{
 #' 		\link[rapp.core.examples]{ensureExampleFiles},
 #' 		\link[rapp.core.examples]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
@@ -205,7 +205,7 @@ setMethod(f = "ensureExampleFiles",
       idx <- unique(grep(pattern_exampletag, roxycode, perl=TRUE))
       
       if (length(idx)) {
-        examples <- roxycode[idx]
+        examples <- unique(roxycode[idx])
         examples <- file.path(path_examples, basename(examples))
 #         ii_2=examples[1]
         out <- sapply(examples, function(ii_2) {

@@ -14,7 +14,7 @@
 #' @param return_path See \code{\link[rapp.core.examples]{getExistingExamples}}.   
 #' @template threedot
 #' @template context-and-namespace
-#' @example inst/examples/getMissingExamples.R
+#' @example inst/examples/getMissingExamples.r
 #' @seealso \code{
 #'    \link[rapp.core.examples]{getMissingExamples-character-missing-missing-method},
 #'    \link[rapp.core.examples]{getMissingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method},
@@ -61,7 +61,7 @@ setGeneric(
 #' @param .ns \code{\link{missing}}.   
 #' @return See method: 
 #' 		\code{\link[rapp.core.examples]{getMissingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
-#' @example inst/examples/getMissingExamples.R
+#' @example inst/examples/getMissingExamples.r
 #' @seealso \code{
 #' 		\link[rapp.core.examples]{getMissingExamples},
 #' 		\link[rapp.core.examples]{getMissingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method},
@@ -124,7 +124,7 @@ setMethod(
 #' @param .ns \code{\link{RappCoreExamplesS3}}.  
 #' @return \code{\link{character}}. Names of functions/methods for which 
 #' 		there exist no examples yet.
-#' @example inst/examples/getMissingExamples.R
+#' @example inst/examples/getMissingExamples.r
 #' @seealso \code{
 #' 		\link[rapp.core.examples]{getBinaryExampleStatus},
 #' 		\link[rapp.core.examples]{getMissingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method}

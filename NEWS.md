@@ -1,3 +1,34 @@
+# CHANGES IN rapp.core.examples VERSION 0.1.0.8
+
+## NEW FEATURES
+
+## BUG FIXES
+
+- `ensureExamplesDirectory()`:
+  - ensured uniqueness of example file paths
+
+## MAJOR CHANGES
+
+## MINOR CHANGES
+
+-----
+
+# CHANGES IN rapp.core.examples VERSION 0.1.0.7
+
+## NEW FEATURES
+
+## BUG FIXES
+
+- Minor bugfixes
+
+## MAJOR CHANGES
+
+## MINOR CHANGES
+
+-----
+
+-----
+
 # CHANGES IN rapp.core.examples VERSION 0.1.0.6
 
 ## NEW FEATURES
@@ -12,7 +43,7 @@
 
 -----
 
-# CHANGES IN knitr VERSION 0.1.0.6
+# CHANGES IN knitr VERSION 0.1.0.5
 
 ## NEW FEATURES
 

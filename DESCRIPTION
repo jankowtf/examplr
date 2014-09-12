@@ -1,8 +1,8 @@
 Package: rapp.core.examples
 Type: Package
 Title: Ensures and processes package project example files
-Version: 0.1.0.7
-Date: 2014-09-02
+Version: 0.1.0.8
+Date: 2014-09-12
 Author: Janko Thyson [aut, cre]
 Maintainer: Janko Thyson <janko.thyson@gmail.com>
 Description: Ensures that a respective example file exists for each
@@ -12,4 +12,5 @@ Roxygen: list(wrap = FALSE)
 NeedsCompilation: no
 Repository: CRAN
 Depends:
-    compiler
+    compiler,
+    rapp.core.condition

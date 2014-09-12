@@ -55,7 +55,7 @@ setGeneric(
 #' @param .ns \code{\link{missing}}.   
 #' @return See method: 
 #' 		\code{\link[rapp.core.examples]{getBinaryExampleStatus-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
-#' @example inst/examples/getBinaryExampleStatus.R
+#' @example inst/examples/getBinaryExampleStatus.r
 #' @seealso \code{
 #' 		\link[rapp.core.examples]{getBinaryExampleStatus},
 #' 		\link[rapp.core.examples]{getBinaryExampleStatus-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
@@ -108,7 +108,7 @@ setMethod(
 #' @return \code{logical}. Logical vector whose length corresponds to the 
 #'    number of files identified in \code{path}. For each example file, 
 #'    \code{TRUE} means actual example code exists, \code{FALSE} means it does not.
-#' @example inst/examples/getBinaryExampleStatus.R
+#' @example inst/examples/getBinaryExampleStatus.r
 #' @seealso \code{
 #' 		\link[rapp.core.examples]{getBinaryExampleStatus},
 #' 		\link[rapp.core.examples]{getBinaryExampleStatus-character-missing-missing-method}
@@ -116,6 +116,7 @@ setMethod(
 #' @template author
 #' @template references
 #' @export
+#' @immport rapp.core.condition
 setMethod(
   f = "getBinaryExampleStatus", 
   signature = signature(
@@ -141,7 +142,7 @@ setMethod(
   
   ## Validate //
   if (!file.exists(path)) {
-    signalCondition(
+    rapp.core.condition::signalCondition(
       condition = "DirectoryDoesNotExist", 
       msg = c(
         "Example file directory does not exist",
@@ -151,7 +152,7 @@ setMethod(
     )
   }
   if (!file.info(path)[,"isdir"]) {
-    signalCondition(
+    rapp.core.condition::signalCondition(
       condition = "NotADirectory", 
       msg = c(
         "Path to example file directory is not a directory",
@@ -165,7 +166,7 @@ setMethod(
   files <- list.files(path, full.names = TRUE)
   idx 	<- which(!file.info(files)[,"isdir"])
   if (!length(idx)) {
-    signalCondition(
+    rapp.core.condition::signalCondition(
       condition = "NoExampleFilesFound", 
       msg = c(
         "No files found in example file directory",

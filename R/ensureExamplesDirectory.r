@@ -10,7 +10,7 @@
 #'    Object containing path information.
 #' @template threedot
 #' @template context-and-namespace
-#' @example inst/examples/ensureExamplesDirectory.R
+#' @example inst/examples/ensureExamplesDirectory.r
 #' @seealso \code{
 #'    \link[rapp2]{ensureExamplesDirectory-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
 #' }
@@ -45,7 +45,7 @@ setGeneric(
 #' @param .ns \code{\link{missing}}.   
 #' @return See method: 
 #' 		\code{\link[rapp.core.examples]{ensureExamplesDirectory-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
-#' @example inst/examples/ensureExamplesDirectory.R
+#' @example inst/examples/ensureExamplesDirectory.r
 #' @seealso \code{
 #' 		\link[rapp.core.examples]{ensureExamplesDirectory},
 #' 		\link[rapp.core.examples]{ensureExamplesDirectory-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
@@ -82,7 +82,7 @@ setMethod(f = "ensureExamplesDirectory",
 #' @param .ns \code{\link{missing}}.   
 #' @return See method: 
 #'     \code{\link[rapp.core.examples]{ensureExamplesDirectory-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
-#' @example inst/examples/ensureExamplesDirectory.R
+#' @example inst/examples/ensureExamplesDirectory.r
 #' @seealso \code{
 #' 		\link[rapp.core.examples]{ensureExamplesDirectory},
 #' 		\link[rapp.core.examples]{ensureExamplesDirectory-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
@@ -124,7 +124,7 @@ setMethod(f = "ensureExamplesDirectory",
 #' @param .ns \code{\link{RappCoreExamplesS3}}.   
 #' @return See method: 
 #'   	\code{\link[rapp.core.examples]{ensureExamplesDirectory-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
-#' @example inst/examples/ensureExamplesDirectory.R
+#' @example inst/examples/ensureExamplesDirectory.r
 #' @seealso \code{
 #' 		\link[rapp.core.examples]{ensureExamplesDirectory}
 #' }

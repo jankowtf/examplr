@@ -19,7 +19,7 @@
 #' 		\code{FALSE} (default) means only non-dont-run examples are considered.
 #' @template threedot
 #' @template context-and-namespace
-#' @example inst/examples/runExamples.R
+#' @example inst/examples/runExamples.r
 #' @template author
 #' @template references
 #' @export
@@ -55,7 +55,7 @@ setGeneric(
 #'    Default namesapce.
 #' @return See method:
 #'   	\code{\link[rapp.core.examples]{runExamples-character-RappCoreExamplesS3-RappCoreExamplesS3}}
-#' @example inst/examples/runExamples.R
+#' @example inst/examples/runExamples.r
 #' @template author
 #' @template references
 #' @export
@@ -99,7 +99,7 @@ setMethod(
 #' @param .ns \code{\link{RappCoreExamplesS3}}. 
 #' @return See method:
 #' 		\code{\link[rapp.core.examples]{runExamples-character-RappCoreExamplesS3-RappCoreExamplesS3}}
-#' @example inst/examples/runExamples.R
+#' @example inst/examples/runExamples.r
 #' @template author
 #' @template references
 #' @export
