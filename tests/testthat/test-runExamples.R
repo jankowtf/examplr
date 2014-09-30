@@ -1,5 +1,5 @@
-require("testthat")
-test_that(desc="test_runExamples",
+context("runExamples-1")
+test_that(desc="runExamples",
   code={
     
     ##--------------------------------------------------------------------------
@@ -28,6 +28,5 @@ test_that(desc="test_runExamples",
     
     expect_is(res <- runExamples(path = path), "logical")
     expect_is(res <- runExamples(path = path, dontrun = TRUE), "logical")
-    
   }
 )

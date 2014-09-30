@@ -1,5 +1,5 @@
-require("testthat")
-test_that(desc="test_getExistingExamples",
+context("getExistingExamples-1")
+test_that(desc="getExistingExamples",
   code={
     
     ##--------------------------------------------------------------------------

@@ -49,11 +49,11 @@ setGeneric(
 #' @param .ctx \code{\link{missing}}. 
 #' @param .ns \code{\link{missing}}.   
 #' @return See method: 
-#' 		\code{\link[rapp.core.examples]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
+#' 		\code{\link[examplr]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
 #' @example inst/examples/ensureExampleFiles.R
 #' @seealso \code{
-#' 		\link[rapp.core.examples]{ensureExampleFiles},
-#' 		\link[rapp.core.examples]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
+#' 		\link[examplr]{ensureExampleFiles},
+#' 		\link[examplr]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
 #' }
 #' @template author
 #' @template references
@@ -91,11 +91,11 @@ setMethod(f = "ensureExampleFiles",
 #' @param .ctx \code{\link{missing}}. 
 #' @param .ns \code{\link{missing}}.   
 #' @return See method: 
-#'     \code{\link[rapp.core.examples]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
+#'     \code{\link[examplr]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
 #' @example inst/examples/ensureExampleFiles.R
 #' @seealso \code{
-#' 		\link[rapp.core.examples]{ensureExampleFiles},
-#' 		\link[rapp.core.examples]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
+#' 		\link[examplr]{ensureExampleFiles},
+#' 		\link[examplr]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
 #' }
 #' @template author
 #' @template references
@@ -138,10 +138,10 @@ setMethod(f = "ensureExampleFiles",
 #' @param .ctx \code{\link{RappCoreExamplesS3}}. 
 #' @param .ns \code{\link{RappCoreExamplesS3}}.   
 #' @return See method: 
-#'   	\code{\link[rapp.core.examples]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
+#'   	\code{\link[examplr]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
 #' @example inst/examples/ensureExampleFiles.R
 #' @seealso \code{
-#' 		\link[rapp.core.examples]{ensureExampleFiles}
+#' 		\link[examplr]{ensureExampleFiles}
 #' }
 #' @template author
 #' @template references

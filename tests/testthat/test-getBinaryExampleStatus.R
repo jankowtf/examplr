@@ -1,4 +1,4 @@
-require("testthat")
+context("getBinaryExampleStatus-1")
 test_that(desc="getBinaryExampleStatus",
   code={
     

@@ -11,13 +11,13 @@
 #' 		Object containing directory path information (directory that contains 
 #' 		the examples' script files).      
 #' @param pattern See \code{pattern} of 
-#' 		\code{\link[rapp.core.examples]{getBinaryExampleStatus}}.
+#' 		\code{\link[examplr]{getBinaryExampleStatus}}.
 #' @template threedot
 #' @template context-and-namespace
 #' @example inst/examples/isDontRunExample.r
 #' @seealso \code{
-#'    \link[rapp.core.examples]{isDontRunExample-character-missing-missing-method},
-#'    \link[rapp.core.examples]{isDontRunExample-character-RappCoreExamplesS3-RappCoreExamplesS3-method},
+#'    \link[examplr]{isDontRunExample-character-missing-missing-method},
+#'    \link[examplr]{isDontRunExample-character-RappCoreExamplesS3-RappCoreExamplesS3-method},
 #' }
 #' @template author
 #' @template references
@@ -52,11 +52,11 @@ setGeneric(
 #' @param .ctx \code{\link{missing}}. 
 #' @param .ns \code{\link{missing}}.   
 #' @return See method: 
-#' 		\code{\link[rapp.core.examples]{isDontRunExample-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
+#' 		\code{\link[examplr]{isDontRunExample-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
 #' @example inst/examples/isDontRunExample.r
 #' @seealso \code{
-#' 		\link[rapp.core.examples]{isDontRunExample},
-#' 		\link[rapp.core.examples]{isDontRunExample-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
+#' 		\link[examplr]{isDontRunExample},
+#' 		\link[examplr]{isDontRunExample-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
 #' }
 #' @template author
 #' @template references
@@ -113,8 +113,8 @@ setMethod(
 #' 		"dont-run" example, \code{FALSE} means it is not.
 #' @example inst/examples/isDontRunExample.r
 #' @seealso \code{
-#' 		\link[rapp.core.examples]{isDontRunExample},
-#' 		\link[rapp.core.examples]{isDontRunExample-character-missing-missing-method}
+#' 		\link[examplr]{isDontRunExample},
+#' 		\link[examplr]{isDontRunExample-character-missing-missing-method}
 #' }
 #' @template author
 #' @template references

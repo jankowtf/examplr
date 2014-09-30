@@ -1,5 +1,5 @@
-require("testthat")
-test_that(desc="test_isDontRunExample",
+context("isDontRunExample-1")
+test_that(desc="isDontRunExample",
   code={
     
     ##--------------------------------------------------------------------------

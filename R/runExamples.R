@@ -54,7 +54,7 @@ setGeneric(
 #' @param .ns \code{\link{missing}}. 
 #'    Default namesapce.
 #' @return See method:
-#'   	\code{\link[rapp.core.examples]{runExamples-character-RappCoreExamplesS3-RappCoreExamplesS3}}
+#'   	\code{\link[examplr]{runExamples-character-RappCoreExamplesS3-RappCoreExamplesS3}}
 #' @example inst/examples/runExamples.r
 #' @template author
 #' @template references
@@ -98,7 +98,7 @@ setMethod(
 #' @param .ctx \code{\link{RappCoreExamplesS3}}. 
 #' @param .ns \code{\link{RappCoreExamplesS3}}. 
 #' @return See method:
-#' 		\code{\link[rapp.core.examples]{runExamples-character-RappCoreExamplesS3-RappCoreExamplesS3}}
+#' 		\code{\link[examplr]{runExamples-character-RappCoreExamplesS3-RappCoreExamplesS3}}
 #' @example inst/examples/runExamples.r
 #' @template author
 #' @template references

@@ -56,11 +56,11 @@ setGeneric(
 #' @param .ctx \code{\link{missing}}. 
 #' @param .ns \code{\link{missing}}.   
 #' @return See method: 
-#' 		\code{\link[rapp.core.examples]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
+#' 		\code{\link[examplr]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
 #' @example inst/examples/ensureExampleFiles.r
 #' @seealso \code{
-#' 		\link[rapp.core.examples]{ensureExampleFiles},
-#' 		\link[rapp.core.examples]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
+#' 		\link[examplr]{ensureExampleFiles},
+#' 		\link[examplr]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
 #' }
 #' @template author
 #' @template references
@@ -99,11 +99,11 @@ setMethod(f = "ensureExampleFiles",
 #' @param .ctx \code{\link{missing}}. 
 #' @param .ns \code{\link{missing}}.   
 #' @return See method: 
-#'     \code{\link[rapp.core.examples]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
+#'     \code{\link[examplr]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
 #' @example inst/examples/ensureExampleFiles.r
 #' @seealso \code{
-#' 		\link[rapp.core.examples]{ensureExampleFiles},
-#' 		\link[rapp.core.examples]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
+#' 		\link[examplr]{ensureExampleFiles},
+#' 		\link[examplr]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
 #' }
 #' @template author
 #' @template references
@@ -148,16 +148,16 @@ setMethod(f = "ensureExampleFiles",
 #' @param .ctx \code{\link{RappCoreExamplesS3}}. 
 #' @param .ns \code{\link{RappCoreExamplesS3}}.   
 #' @return See method: 
-#'   	\code{\link[rapp.core.examples]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
+#'   	\code{\link[examplr]{ensureExampleFiles-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
 #' @example inst/examples/ensureExampleFiles.r
 #' @seealso \code{
-#' 		\link[rapp.core.examples]{ensureExampleFiles}
+#' 		\link[examplr]{ensureExampleFiles}
 #' }
 #' @template author
 #' @template references
 #' @export
 #' @import devtools
-#' @import rapp.core.condition
+#' @import conditionr
 setMethod(f = "ensureExampleFiles", 
   signature = signature(
     pkg = "character",
@@ -211,7 +211,7 @@ setMethod(f = "ensureExampleFiles",
 #         ii_2=examples[1]
         out <- sapply(examples, function(ii_2) {
           if (length(grep("\\.R$", ii_2))) {
-            rapp.core.condition::signalCondition(
+            conditionr::signalCondition(
               condition = "ConventionViolation:FileExtension",
               msg = c(
                 "Convention violation: file extension of example file path",
@@ -219,20 +219,20 @@ setMethod(f = "ensureExampleFiles",
                 Path = ii_2,
                 "Expected file extension" = ".r"
               ),
-              ns = "rapp.core.examples",
+              ns = "examplr",
               type = cond_type
             )
           }
           ii_2 <- gsub("\\.R$", ".r", ii_2)
           if (!length(grep("\\.r$", ii_2))) {
-            rapp.core.condition::signalCondition(
+            conditionr::signalCondition(
               condition = "InvalidExampleFilePath",
               msg = c(
                 "Invalid example file path",
                 File = ii,
                 Path = ii_2
               ),
-              ns = "rapp.core.examples",
+              ns = "examplr",
               type = "error"
             )
           }

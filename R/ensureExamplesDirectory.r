@@ -44,11 +44,11 @@ setGeneric(
 #' @param .ctx \code{\link{missing}}. 
 #' @param .ns \code{\link{missing}}.   
 #' @return See method: 
-#' 		\code{\link[rapp.core.examples]{ensureExamplesDirectory-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
+#' 		\code{\link[examplr]{ensureExamplesDirectory-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
 #' @example inst/examples/ensureExamplesDirectory.r
 #' @seealso \code{
-#' 		\link[rapp.core.examples]{ensureExamplesDirectory},
-#' 		\link[rapp.core.examples]{ensureExamplesDirectory-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
+#' 		\link[examplr]{ensureExamplesDirectory},
+#' 		\link[examplr]{ensureExamplesDirectory-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
 #' }
 #' @template author
 #' @template references
@@ -81,11 +81,11 @@ setMethod(f = "ensureExamplesDirectory",
 #' @param .ctx \code{\link{missing}}. 
 #' @param .ns \code{\link{missing}}.   
 #' @return See method: 
-#'     \code{\link[rapp.core.examples]{ensureExamplesDirectory-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
+#'     \code{\link[examplr]{ensureExamplesDirectory-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
 #' @example inst/examples/ensureExamplesDirectory.r
 #' @seealso \code{
-#' 		\link[rapp.core.examples]{ensureExamplesDirectory},
-#' 		\link[rapp.core.examples]{ensureExamplesDirectory-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
+#' 		\link[examplr]{ensureExamplesDirectory},
+#' 		\link[examplr]{ensureExamplesDirectory-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
 #' }
 #' @template author
 #' @template references
@@ -123,10 +123,10 @@ setMethod(f = "ensureExamplesDirectory",
 #' @param .ctx \code{\link{RappCoreExamplesS3}}. 
 #' @param .ns \code{\link{RappCoreExamplesS3}}.   
 #' @return See method: 
-#'   	\code{\link[rapp.core.examples]{ensureExamplesDirectory-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
+#'   	\code{\link[examplr]{ensureExamplesDirectory-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
 #' @example inst/examples/ensureExamplesDirectory.r
 #' @seealso \code{
-#' 		\link[rapp.core.examples]{ensureExamplesDirectory}
+#' 		\link[examplr]{ensureExamplesDirectory}
 #' }
 #' @template author
 #' @template references

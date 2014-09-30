@@ -1,4 +1,4 @@
-require("testthat")
+context("getMissingExamples-1")
 test_that(desc="getMissingExamples",
   code={
     

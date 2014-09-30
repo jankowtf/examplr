@@ -1,4 +1,34 @@
-# CHANGES IN rapp.core.examples VERSION 0.1.0.9
+# CHANGES IN VERSION 0.1.1
+
+## NEW FEATURES
+
+## BUG FIXES
+
+## MAJOR CHANGES
+
+## MINOR CHANGES
+
+## MISC
+
+-----
+
+# CHANGES IN examplr VERSION 0.1.0.10
+
+## NEW FEATURES
+
+## BUG FIXES
+
+## MAJOR CHANGES
+
+## MINOR CHANGES
+
+## MISC
+
+- new patch version to comply with repo conventions
+
+-----
+
+# CHANGES IN examplr VERSION 0.1.0.9
 
 ## NEW FEATURES
 
@@ -13,7 +43,7 @@
 
 -----
 
-# CHANGES IN rapp.core.examples VERSION 0.1.0.8
+# CHANGES IN examplr VERSION 0.1.0.8
 
 ## NEW FEATURES
 
@@ -28,7 +58,7 @@
 
 -----
 
-# CHANGES IN rapp.core.examples VERSION 0.1.0.7
+# CHANGES IN examplr VERSION 0.1.0.7
 
 ## NEW FEATURES
 
@@ -44,7 +74,7 @@
 
 -----
 
-# CHANGES IN rapp.core.examples VERSION 0.1.0.6
+# CHANGES IN examplr VERSION 0.1.0.6
 
 ## NEW FEATURES
 

@@ -9,17 +9,17 @@
 #' @param path \strong{Signature argument}.
 #' 		Object containing directory path information (directory that contains 
 #' 		the examples' script files).  
-#' @param pattern See \code{\link[rapp.core.examples]{getBinaryExampleStatus}}.
-#' @param include_fileext See \code{\link[rapp.core.examples]{getExistingExamples}}.   
-#' @param return_path See \code{\link[rapp.core.examples]{getExistingExamples}}.   
+#' @param pattern See \code{\link[examplr]{getBinaryExampleStatus}}.
+#' @param include_fileext See \code{\link[examplr]{getExistingExamples}}.   
+#' @param return_path See \code{\link[examplr]{getExistingExamples}}.   
 #' @template threedot
 #' @template context-and-namespace
 #' @example inst/examples/getMissingExamples.r
 #' @seealso \code{
-#'    \link[rapp.core.examples]{getMissingExamples-character-missing-missing-method},
-#'    \link[rapp.core.examples]{getMissingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method},
-#' 		\link[rapp.core.examples]{getExampleBinaryStatus},
-#' 		\link[rapp.core.examples]{getExistingExamples}
+#'    \link[examplr]{getMissingExamples-character-missing-missing-method},
+#'    \link[examplr]{getMissingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method},
+#' 		\link[examplr]{getExampleBinaryStatus},
+#' 		\link[examplr]{getExistingExamples}
 #' }
 #' @template author
 #' @template references
@@ -60,12 +60,12 @@ setGeneric(
 #' @param .ctx \code{\link{missing}}. 
 #' @param .ns \code{\link{missing}}.   
 #' @return See method: 
-#' 		\code{\link[rapp.core.examples]{getMissingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
+#' 		\code{\link[examplr]{getMissingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
 #' @example inst/examples/getMissingExamples.r
 #' @seealso \code{
-#' 		\link[rapp.core.examples]{getMissingExamples},
-#' 		\link[rapp.core.examples]{getMissingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method},
-#'   	\link[rapp.core.examples]{getExistingExamples},
+#' 		\link[examplr]{getMissingExamples},
+#' 		\link[examplr]{getMissingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method},
+#'   	\link[examplr]{getExistingExamples},
 #' }
 #' @template author
 #' @template references
@@ -126,8 +126,8 @@ setMethod(
 #' 		there exist no examples yet.
 #' @example inst/examples/getMissingExamples.r
 #' @seealso \code{
-#' 		\link[rapp.core.examples]{getBinaryExampleStatus},
-#' 		\link[rapp.core.examples]{getMissingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
+#' 		\link[examplr]{getBinaryExampleStatus},
+#' 		\link[examplr]{getMissingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
 #' }
 #' @export
 #' @template author

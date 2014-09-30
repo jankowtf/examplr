@@ -7,3 +7,4 @@ packrat/src
 .*so
 .*o
 NEWS
+.Rproj.user

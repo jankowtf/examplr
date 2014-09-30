@@ -9,7 +9,7 @@
 #' 		Object containing directory path information (directory that contains 
 #' 		the examples' script files).  
 #' @param pattern See \code{pattern} of 
-#' 		\code{\link[rapp.core.examples]{getBinaryExampleStatus}}
+#' 		\code{\link[examplr]{getBinaryExampleStatus}}
 #' @param include_fileext \code{\link{logical}}. Dimension: 1.
 #'   	\code{TRUE} means return value includes file extensions,
 #' 		\code{FALSE} means file extensions are removed.
@@ -22,10 +22,10 @@
 #' @template threedot
 #' @template context-and-namespace
 #' @seealso \code{
-#'    \link[rapp.core.examples]{getExistingExamples-character-missing-missing-method},
-#'    \link[rapp.core.examples]{getExistingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method},
-#'    \link[rapp.core.examples]{getExampleBinaryStatus},
-#' 		\link[rapp.core.examples]{getMissingExamples}
+#'    \link[examplr]{getExistingExamples-character-missing-missing-method},
+#'    \link[examplr]{getExistingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method},
+#'    \link[examplr]{getExampleBinaryStatus},
+#' 		\link[examplr]{getMissingExamples}
 #' }
 #' @template author
 #' @template references
@@ -63,11 +63,11 @@ setGeneric(
 #' @param .ctx \code{\link{missing}}. 
 #' @param .ns \code{\link{missing}}.   
 #' @return See method: 
-#' 		\code{\link[rapp.core.examples]{getExistingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
+#' 		\code{\link[examplr]{getExistingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
 #' @example inst/examples/getExistingExamples.r
 #' @seealso \code{
-#' 		\link[rapp.core.examples]{getExistingExamples},
-#' 		\link[rapp.core.examples]{getExistingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
+#' 		\link[examplr]{getExistingExamples},
+#' 		\link[examplr]{getExistingExamples-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
 #' }
 #' @template author
 #' @template references
@@ -139,8 +139,8 @@ setMethod(
 #' @return TODO
 #' @example inst/examples/getExistingExamples.r
 #' @seealso \code{
-#' 		\link[rapp.core.examples]{getExistingExamples},
-#' 		\link[rapp.core.examples]{getExistingExamples-character-missing-missing-method}
+#' 		\link[examplr]{getExistingExamples},
+#' 		\link[examplr]{getExistingExamples-character-missing-missing-method}
 #' }
 #' @template author
 #' @template references

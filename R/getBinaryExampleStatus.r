@@ -18,8 +18,8 @@
 #' @example inst/examples/getBinaryExampleStatus.r
 #' @seealso
 #' \code{
-#'  \link[rapp.core.examples]{getBinaryExampleStatus-character-missing-missing-method},
-#'  \link[rapp.core.examples]{getBinaryExampleStatus-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
+#'  \link[examplr]{getBinaryExampleStatus-character-missing-missing-method},
+#'  \link[examplr]{getBinaryExampleStatus-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
 #' }
 #' @template author
 #' @template references
@@ -54,11 +54,11 @@ setGeneric(
 #' @param .ctx \code{\link{missing}}. 
 #' @param .ns \code{\link{missing}}.   
 #' @return See method: 
-#' 		\code{\link[rapp.core.examples]{getBinaryExampleStatus-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
+#' 		\code{\link[examplr]{getBinaryExampleStatus-character-RappCoreExamplesS3-RappCoreExamplesS3-method}}.
 #' @example inst/examples/getBinaryExampleStatus.r
 #' @seealso \code{
-#' 		\link[rapp.core.examples]{getBinaryExampleStatus},
-#' 		\link[rapp.core.examples]{getBinaryExampleStatus-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
+#' 		\link[examplr]{getBinaryExampleStatus},
+#' 		\link[examplr]{getBinaryExampleStatus-character-RappCoreExamplesS3-RappCoreExamplesS3-method}
 #' }
 #' @template author
 #' @template references
@@ -110,13 +110,13 @@ setMethod(
 #'    \code{TRUE} means actual example code exists, \code{FALSE} means it does not.
 #' @example inst/examples/getBinaryExampleStatus.r
 #' @seealso \code{
-#' 		\link[rapp.core.examples]{getBinaryExampleStatus},
-#' 		\link[rapp.core.examples]{getBinaryExampleStatus-character-missing-missing-method}
+#' 		\link[examplr]{getBinaryExampleStatus},
+#' 		\link[examplr]{getBinaryExampleStatus-character-missing-missing-method}
 #' }
 #' @template author
 #' @template references
 #' @export
-#' @immport rapp.core.condition
+#' @import conditionr
 setMethod(
   f = "getBinaryExampleStatus", 
   signature = signature(
@@ -142,7 +142,7 @@ setMethod(
   
   ## Validate //
   if (!file.exists(path)) {
-    rapp.core.condition::signalCondition(
+    conditionr::signalCondition(
       condition = "DirectoryDoesNotExist", 
       msg = c(
         "Example file directory does not exist",
@@ -152,7 +152,7 @@ setMethod(
     )
   }
   if (!file.info(path)[,"isdir"]) {
-    rapp.core.condition::signalCondition(
+    conditionr::signalCondition(
       condition = "NotADirectory", 
       msg = c(
         "Path to example file directory is not a directory",
@@ -166,7 +166,7 @@ setMethod(
   files <- list.files(path, full.names = TRUE)
   idx 	<- which(!file.info(files)[,"isdir"])
   if (!length(idx)) {
-    rapp.core.condition::signalCondition(
+    conditionr::signalCondition(
       condition = "NoExampleFilesFound", 
       msg = c(
         "No files found in example file directory",
